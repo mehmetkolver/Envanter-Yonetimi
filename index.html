@@ -1,146 +1,205 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemoliStudio - Gizlilik Sözleşmesi</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
-        h2 {
-            color: #667eea;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .date-updated {
-            text-align: right;
-            color: #666;
-            font-style: italic;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stocky · Stock Manager</title>
+  <!-- Tailwind (v3) + base layer -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- tiny custom style for accent & smoothness -->
+  <style>
+      .bg-primary { background-color: #0033CC; }
+      .text-primary { color: #0033CC; }
+      .border-primary { border-color: #0033CC; }
+      .hover\:bg-primary-dark:hover { background-color: #0029a3; } /* subtle darken for hover */
+      .focus-ring-primary:focus { outline: 2px solid #0033CC; outline-offset: 2px; }
+      /* smooth barcode placeholder */
+      .barcode-pattern {
+          background: repeating-linear-gradient(90deg, #1e1e2f 0px, #1e1e2f 4px, #e9eef2 4px, #e9eef2 8px);
+      }
+  </style>
 </head>
-<body>
-    <div class="header">
-        <h1>MemoliStudio</h1>
-        <p>Gizlilik Sözleşmesi</p>
-        <p class="date-updated">Son Güncelleme: 28 Ocak 2026</p>
+<body class="font-sans antialiased text-gray-800 bg-white">
+
+<!-- header / nav (simple) -->
+<header class="border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <!-- logo area -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-boxes text-2xl" style="color:#0033CC;"></i>
+      <span class="font-semibold text-xl tracking-tight">Stocky<span class="text-sm font-light text-gray-400 ml-1">stock manager</span></span>
     </div>
-
-    <div class="container">
-        <p>MemoliStudio ("biz", "bize", "MemoliStudio" veya "uygulama") gizliliğinize saygı duyar ve kişisel verilerinizi korumak için en yüksek standartları uygular. Bu Gizlilik Sözleşmesi, MemoliStudio mobil uygulaması ve ilgili Hizmetlerimizi ("Hizmetler") kullanırken topladığımız, kullandığımız ve paylaştığımız bilgiler hakkında sizi bilgilendirmek için hazırlanmıştır.</p>
-
-        <h2>1. Toplanan Bilgiler</h2>
-        <p>Hizmetlerimizi sunmak için aşağıdaki bilgileri toplayabiliriz:</p>
-        <ul>
-            <li><strong>Kişisel Bilgiler:</strong> Ad, e-posta adresi, telefon numarası (isteğe bağlı kayıt sırasında)</li>
-            <li><strong>Kullanım Bilgileri:</strong> IP adresi, cihaz türü, işletim sistemi, uygulama kullanım istatistikleri</li>
-            <li><strong>İçerik Verileri:</strong> Oluşturduğunuz memeler, paylaştığınız içerikler, beğeniler ve yorumlar</li>
-            <li><strong>Çerezler ve Takip Teknolojileri:</strong> Tercihlerinizi hatırlamak ve deneyiminizi kişiselleştirmek için</li>
-        </ul>
-
-        <h2>2. Bilgilerin Kullanımı</h2>
-        <p>Topladığımız bilgileri şu amaçlarla kullanırız:</p>
-        <ul>
-            <li>Hizmetlerimizi sunmak ve geliştirmek</li>
-            <li>Hesap yönetimini sağlamak</li>
-            <li>İçerik önerileri sunmak</li>
-            <li>İletişim ve bildirim göndermek</li>
-            <li>Yasal yükümlülüklere uymak</li>
-            <li>Hizmet güvenliğini sağlamak</li>
-        </ul>
-
-        <h2>3. Bilgi Paylaşımı</h2>
-        <p>Kişisel bilgilerinizi şu durumlarda üçüncü taraflarla paylaşabiliriz:</p>
-        <ul>
-            <li>Hizmet sağlayıcılarımızla (sunucu barındırma, analiz araçları)</li>
-            <li>Yasal zorunluluklar halinde</li>
-            <li>İşletmemizin bir kısmını veya tamamını satma durumunda</li>
-            <li>Kullanıcı onayı ile</li>
-        </ul>
-        <p><strong>Bilgilerinizi asla reklam amaçlı satmayız veya kiralamayız.</strong></p>
-
-        <h2>4. Veri Güvenliği</h2>
-        <p>Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanırız:</p>
-        <ul>
-            <li>SSL/TLS şifreleme</li>
-            <li>Güvenlik duvarları</li>
-            <li>Düzenli güvenlik denetimleri</li>
-            <li>Çift faktörlü kimlik doğrulama (kullanılabilirse)</li>
-        </ul>
-
-        <h2>5. Çocukların Gizliliği</h2>
-        <p>Hizmetlerimiz 13 yaş altındaki çocuklara yönelik değildir. 13 yaşından küçük çocukların bilgilerini bilerek toplamayız.</p>
-
-        <h2>6. Üçüncü Taraf Bağlantıları</h2>
-        <p>Uygulamamız sosyal medya paylaşım özellikleri içerebilir. Bu bağlantıları kullandığınızda ilgili platformların gizlilik politikaları geçerli olur.</p>
-
-        <h2>7. Veri Saklama Süresi</h2>
-        <p>Bilgilerinizi yalnızca Hizmetlerimizi sağlamak ve yasal yükümlülüklere uymak için gerekli olduğu sürece saklarız. Hesabınızı sildiğinizde verileriniz kalıcı olarak silinir (yasal saklama süreleri hariç).</p>
-
-        <h2>8. Sizin Haklarınız</h2>
-        <p>GDPR ve KVKK kapsamında şu haklara sahipsiniz:</p>
-        <ul>
-            <li>Verilerinize erişim hakkı</li>
-            <li>Verilerinizin düzeltilmesi</li>
-            <li>Verilerinizin silinmesi ("unutulma hakkı")</li>
-            <li>Veri taşınabilirliği</li>
-            <li>İşlemeye itiraz hakkı</li>
-        </ul>
-        <p>Taleplerinizi <a href="mailto:gizlilik@memolistudio.com">gizlilik@memolistudio.com</a> adresine iletebilirsiniz.</p>
-
-        <h2>9. Çerezler</h2>
-        <p>Hizmetlerimiz çerezler kullanır. Çerez tercihlerinizi tarayıcı ayarlarından yönetebilirsiniz.</p>
-
-        <h2>10. Değişiklikler</h2>
-        <p>Bu Gizlilik Sözleşmesi'ni güncelleyebiliriz. Önemli değişiklikler için bildirim göndeririz. Devam eden kullanımınız güncellemeleri kabul ettiğiniz anlamına gelir.</p>
-
-        <h2>11. İletişim</h2>
-        <p>Gizlilik ile ilgili sorularınız için:</p>
-        <p><strong>MemoliStudio</strong><br>
-           E-posta: <a href="mailto:gizlilik@memolistudio.com">gizlilik@memolistudio.com</a><br>
-           Adres: [Firma Adresiniz]</p>
-
-        <p><em>Sözleşmeyi kabul ederek yukarıdaki şartları onaylamış olursunuz.</em></p>
+    <!-- placeholder for action (optional) -->
+    <div class="flex gap-2 text-sm">
+      <a href="#privacy-tab" class="tab-nav-link hidden md:inline-block text-gray-500 hover:text-[#0033CC] transition">Privacy</a>
+      <a href="#terms-tab" class="tab-nav-link hidden md:inline-block text-gray-500 hover:text-[#0033CC] transition">Terms</a>
+      <a href="#support-tab" class="tab-nav-link hidden md:inline-block text-gray-500 hover:text-[#0033CC] transition">Support</a>
     </div>
+  </div>
+</header>
 
-    <footer>
-        <p>© 2026 MemoliStudio. Tüm hakları saklıdır.</p>
-    </footer>
+<!-- HERO section: value prop + two CTAs to stores -->
+<section class="max-w-6xl mx-auto px-6 pt-12 pb-10 md:pt-16 md:pb-14">
+  <div class="flex flex-col md:flex-row md:items-center md:gap-12">
+    <!-- left: text -->
+    <div class="flex-1 text-center md:text-left">
+      <div class="inline-flex items-center gap-1 bg-blue-50 px-3 py-1 rounded-full text-primary text-sm font-medium mb-5">
+        <i class="fas fa-barcode text-xs"></i>
+        <span>Scan & sell instantly</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        Keep stock <br><span class="text-primary">under control</span>
+      </h1>
+      <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto md:mx-0">
+        Stocky is the simplest way to manage products, track stock count, and sell by scanning barcodes.
+        All your statistics in one place.
+      </p>
+      <!-- store badges + small stats tag -->
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-8">
+        <a href="#" class="bg-black hover:bg-gray-900 text-white px-5 py-2.5 rounded-xl flex items-center gap-3 transition shadow-md">
+          <i class="fab fa-apple text-2xl"></i>
+          <div class="text-left">
+            <div class="text-xs">Download on the</div>
+            <div class="text-sm font-semibold -mt-1">App Store</div>
+          </div>
+        </a>
+        <a href="#" class="bg-black hover:bg-gray-900 text-white px-5 py-2.5 rounded-xl flex items-center gap-3 transition shadow-md">
+          <i class="fab fa-google-play text-2xl"></i>
+          <div class="text-left">
+            <div class="text-xs">Get it on</div>
+            <div class="text-sm font-semibold -mt-1">Google Play</div>
+          </div>
+        </a>
+      </div>
+      <div class="flex items-center justify-center md:justify-start gap-3 mt-6 text-sm text-gray-500">
+        <span><i class="far fa-check-circle text-primary mr-1"></i> 14-day free trial</span>
+        <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+        <span><i class="far fa-check-circle text-primary mr-1"></i> No credit card</span>
+      </div>
+    </div>
+    <!-- right: abstract product + barcode visual (representing the core flow) -->
+    <div class="flex-1 mt-12 md:mt-0 flex justify-center">
+      <div class="relative w-72 h-80 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl border border-gray-200 p-5 flex flex-col">
+
+        <!-- mock status bar -->
+        <div class="flex justify-between items-center text-xs text-gray-400 mb-4">
+          <span>My Hardware Store</span>
+          <span><i class="fas fa-wifi"></i> <i class="fas fa-battery-three-quarters ml-1"></i></span>
+        </div>
+
+        <!-- inventory summary -->
+        <div class="bg-primary/10 rounded-xl p-3 mb-3 flex items-center gap-2">
+          <div class="bg-white p-2 rounded-lg shadow-sm">
+            <i class="fas fa-tools text-primary"></i>
+          </div>
+          <div class="flex-1">
+            <div class="text-xs text-gray-500">Total items</div>
+            <div class="text-xl font-bold text-gray-800">312</div>
+          </div>
+          <div class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">+24</div>
+        </div>
+
+        <!-- product row -->
+        <div class="bg-white border border-gray-100 rounded-xl p-3 flex items-center gap-3 shadow-sm">
+          <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+            <i class="fas fa-screwdriver text-gray-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="font-medium">Cordless Drill</div>
+            <div class="text-xs text-gray-400">SKU: DRL-2201</div>
+          </div>
+          <div class="text-right">
+            <div class="font-semibold">18 left</div>
+            <div class="text-xs text-primary"><i class="fas fa-barcode"></i> sell</div>
+          </div>
+        </div>
+
+        <!-- second product -->
+        <div class="bg-white border border-gray-100 rounded-xl p-3 mt-2 flex items-center gap-3 shadow-sm">
+          <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+            <i class="fas fa-hammer text-gray-600"></i>
+          </div>
+          <div class="flex-1">
+            <div class="font-medium">Steel Hammer</div>
+            <div class="text-xs text-gray-400">SKU: HMR-8840</div>
+          </div>
+          <div class="text-right">
+            <div class="font-semibold">57 left</div>
+            <div class="text-xs text-primary"><i class="fas fa-barcode"></i> sell</div>
+          </div>
+        </div>
+
+        <!-- stats footer -->
+        <div class="mt-4 flex justify-between border-t border-gray-100 pt-3 text-xs text-gray-500">
+          <span><i class="fas fa-arrow-up text-green-500 mr-1"></i> sales +11%</span>
+          <span><i class="fas fa-chart-line text-primary mr-1"></i> revenue $3.4k</span>
+        </div>
+
+        <!-- floating scan button -->
+        <div class="absolute -bottom-4 right-6 bg-primary rounded-full w-12 h-12 flex items-center justify-center shadow-xl border-4 border-white">
+          <i class="fas fa-barcode text-white text-xl"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE GRID: add product, scan & sell, statistics -->
+<section class="bg-gray-50 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Stock, simplified</h2>
+      <p class="text-gray-500 mt-3">Add products, scan barcodes, and watch your business insights grow.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <!-- card 1: add products -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition">
+        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-5">
+          <i class="fas fa-plus-circle text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Add products</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Quickly register new items with name, stock count, and optional barcode. Organize your inventory in seconds.</p>
+      </div>
+      <!-- card 2: scan & sell (highlight) -->
+      <div class="bg-white rounded-2xl p-8 shadow-md border-t-4 border-primary relative">
+        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-5">
+          <i class="fas fa-barcode text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Scan & sell</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Use the built-in scanner to instantly sell items. Reduce errors, speed up checkout, and keep stock count always up‑to‑date.</p>
+        <div class="absolute -top-3 right-8 bg-primary text-white text-xs px-3 py-1 rounded-full shadow-sm">core feature</div>
+      </div>
+      <!-- card 3: statistics -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition">
+        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-5">
+          <i class="fas fa-chart-pie text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Statistics</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Visualize buying vs selling trends, track low stock, and monitor revenue all from a clean dashboard.</p>
+      </div>
+    </div>
+    <!-- short description of the cycle -->
+    <div class="mt-14 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
+      <span class="flex items-center gap-1"><i class="fas fa-check-circle text-primary"></i> Add product</span>
+      <i class="fas fa-arrow-right text-gray-300"></i>
+      <span class="flex items-center gap-1"><i class="fas fa-check-circle text-primary"></i> Scan barcode at sell</span>
+      <i class="fas fa-arrow-right text-gray-300"></i>
+      <span class="flex items-center gap-1"><i class="fas fa-check-circle text-primary"></i> Stock updates</span>
+      <i class="fas fa-arrow-right text-gray-300"></i>
+      <span class="flex items-center gap-1"><i class="fas fa-check-circle text-primary"></i> View stats</span>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- optional footer with dummy links (just for completeness) -->
+<footer class="bg-white py-5 text-center text-xs text-gray-400">
+  <span>Stocky: Stock Manager — barcode first inventory. </span>
+  <a href="#" class="underline hover:text-primary">Contact</a> · <a href="#" class="underline hover:text-primary">FAQ</a>
+</footer>
 </body>
 </html>

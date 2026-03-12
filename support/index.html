@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stocky — Support & FAQ</title>
+  <!-- Tailwind + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+      /* primary color #0033CC */
+      .prose a { color: #0033CC; text-decoration: underline; text-underline-offset: 2px; }
+      .bg-primary-light { background-color: rgba(0,51,204,0.05); }
+      .border-primary { border-color: #0033CC; }
+      .text-primary { color: #0033CC; }
+      .faq-item summary { list-style: none; cursor: pointer; }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item[open] summary .chevron-icon { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+<!-- header with logo & back -->
+<header class="border-b border-gray-100 bg-white/80 sticky top-0 z-10 backdrop-blur-sm">
+  <div class="max-w-4xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a href="/" class="flex items-center gap-2 group">
+      <i class="fas fa-boxes text-2xl" style="color:#0033CC;"></i>
+      <span class="font-semibold text-xl tracking-tight">Stocky<span class="text-sm font-light text-gray-400 ml-1">support</span></span>
+    </a>
+    <div class="text-sm text-gray-400">
+      <a href="/" class="hover:text-[#0033CC] transition"><i class="fas fa-arrow-left mr-1"></i> back to app</a>
+    </div>
+  </div>
+</header>
+
+<!-- main support content -->
+<main class="max-w-4xl mx-auto px-5 md:px-8 py-12 md:py-16">
+
+  <!-- page header with icon and contact cards (email only) -->
+  <div class="text-center mb-12">
+    <div class="inline-flex p-3 bg-blue-50 rounded-full mb-4" style="background-color: rgba(0,51,204,0.1);">
+      <i class="fas fa-headset text-4xl" style="color:#0033CC;"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-3">We're here to help</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Quick answers, step‑by‑step guides, and direct email support — all in one place.</p>
+  </div>
+
+  <!-- contact cards row (only email - removed chat/twitter) -->
+  <div class="grid grid-cols-1 md:grid-cols-1 max-w-md mx-auto gap-5 mb-16">
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition text-center">
+      <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4 mx-auto" style="background-color: rgba(0,51,204,0.1);">
+        <i class="fas fa-envelope text-2xl" style="color:#0033CC;"></i>
+      </div>
+      <h3 class="font-semibold text-gray-800 text-lg">Email support</h3>
+      <p class="text-sm text-gray-500 mt-1">We'll get back to you within 24h</p>
+      <a href="mailto:support@turnaworks.com" class="inline-block mt-4 text-primary font-medium text-lg">support@turnaworks.com <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+    </div>
+  </div>
+
+  <!-- FAQ section (fancy with details/summary) - updated: removed export, no chat mentions -->
+  <div class="mb-16">
+    <div class="flex items-center gap-3 mb-8">
+      <i class="fas fa-circle-question text-3xl" style="color:#0033CC;"></i>
+      <h2 class="text-3xl font-bold text-gray-900">Frequently asked questions</h2>
+    </div>
+
+    <div class="space-y-4">
+      <!-- 1. Account deletion process (detailed - as requested) -->
+      <details class="faq-item group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:border-primary/30 open:bg-white transition">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <div class="flex items-start gap-3">
+              <span class="flex w-7 h-7 rounded-full bg-primary-light items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(0,51,204,0.1);">
+                <i class="fas fa-user-slash text-sm" style="color:#0033CC;"></i>
+              </span>
+            <h3 class="text-xl font-semibold text-gray-800">How do I delete my account? What happens to my data?</h3>
+          </div>
+          <i class="fas fa-chevron-down chevron-icon text-gray-400 transition-transform duration-200"></i>
+        </summary>
+        <div class="mt-5 pl-10 text-gray-600 space-y-4">
+          <p><span class="font-medium text-gray-800">Account deletion is simple and immediate:</span> follow these steps inside the app:</p>
+          <ol class="list-decimal pl-6 space-y-2">
+            <li>Open Stocky and tap your <strong>profile picture</strong> at the top right corner of the screen.</li>
+            <li>Select <strong>"Personal Details"</strong> from the menu.</li>
+            <li>Scroll down to the bottom and tap the red <strong>"Delete Account"</strong> button.</li>
+            <li>Confirm your choice — the process starts right away.</li>
+          </ol>
+          <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded">
+            <p class="font-medium text-amber-800 flex items-start gap-2">
+              <i class="fas fa-shield-alt mt-1"></i>
+              <span><strong>Immediate anonymisation:</strong> As soon as you confirm deletion, all your personal data is anonymised. This means your information is permanently disconnected from your identity and cannot be recovered — even by you.</span>
+            </p>
+          </div>
+          <p>After anonymisation, the data is kept in an anonymous form for <strong>6 months</strong> for internal analytics and legal purposes. After that period, it is fully and permanently erased from our servers.</p>
+          <p class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Total process: instant anonymisation → permanent deletion after 6 months.</p>
+        </div>
+      </details>
+
+      <!-- 2. how to scan barcode -->
+      <details class="faq-item group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:border-primary/30 open:bg-white transition">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <div class="flex items-start gap-3">
+              <span class="flex w-7 h-7 rounded-full bg-primary-light items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(0,51,204,0.1);">
+                <i class="fas fa-camera text-sm" style="color:#0033CC;"></i>
+              </span>
+            <h3 class="text-xl font-semibold text-gray-800">How do I scan a barcode to sell a product?</h3>
+          </div>
+          <i class="fas fa-chevron-down chevron-icon text-gray-400 transition-transform"></i>
+        </summary>
+        <div class="mt-5 pl-10 text-gray-600">
+          <p>From the home screen, tap the barcode icon in the bottom toolbar (or the floating scan button). Point your camera at the product barcode — the product page opens instantly. Then tap "Sell" to decrement stock. The app supports EAN‑13, UPC‑A, and Code 128.</p>
+        </div>
+      </details>
+
+      <!-- 3. stock count wrong -->
+      <details class="faq-item group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:border-primary/30 open:bg-white transition">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <div class="flex items-start gap-3">
+              <span class="flex w-7 h-7 rounded-full bg-primary-light items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(0,51,204,0.1);">
+                <i class="fas fa-pen-to-square text-sm" style="color:#0033CC;"></i>
+              </span>
+            <h3 class="text-xl font-semibold text-gray-800">I entered the wrong stock count. How do I correct it?</h3>
+          </div>
+          <i class="fas fa-chevron-down chevron-icon text-gray-400 transition-transform"></i>
+        </summary>
+        <div class="mt-5 pl-10 text-gray-600">
+          <p>Go to the product details (tap on the product from the list). Tap the edit icon (pencil) next to the stock number. You can manually adjust the quantity. There's also an "Adjust stock" option to add or subtract without overwriting history.</p>
+        </div>
+      </details>
+
+      <!-- 4. subscription / freemium -->
+      <details class="faq-item group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:border-primary/30 open:bg-white transition">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <div class="flex items-start gap-3">
+              <span class="flex w-7 h-7 rounded-full bg-primary-light items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(0,51,204,0.1);">
+                <i class="fas fa-crown text-sm" style="color:#0033CC;"></i>
+              </span>
+            <h3 class="text-xl font-semibold text-gray-800">Is Stocky really free? What does "Freemium" mean?</h3>
+          </div>
+          <i class="fas fa-chevron-down chevron-icon text-gray-400 transition-transform"></i>
+        </summary>
+        <div class="mt-5 pl-10 text-gray-600">
+          <p>Stocky is free to download and use for up to 50 products and basic statistics. If you need unlimited products, advanced reports, or multi‑user access, there is an optional subscription (monthly/yearly). All payments are handled by the app stores.</p>
+        </div>
+      </details>
+
+      <!-- 5. hardware store specific (optional) - kept for context -->
+      <details class="faq-item group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:border-primary/30 open:bg-white transition">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <div class="flex items-start gap-3">
+              <span class="flex w-7 h-7 rounded-full bg-primary-light items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(0,51,204,0.1);">
+                <i class="fas fa-toolbox text-sm" style="color:#0033CC;"></i>
+              </span>
+            <h3 class="text-xl font-semibold text-gray-800">Does Stocky work for hardware store items like screws or tools?</h3>
+          </div>
+          <i class="fas fa-chevron-down chevron-icon text-gray-400 transition-transform"></i>
+        </summary>
+        <div class="mt-5 pl-10 text-gray-600">
+          <p>Absolutely. You can add any product, including hardware items. Use the barcode on the package, or manually enter products without a barcode. Stocky is designed for any kind of inventory — from pasta to power drills.</p>
+        </div>
+      </details>
+
+      <!-- 6. data question (general) - added because export removed but users might ask -->
+      <details class="faq-item group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:border-primary/30 open:bg-white transition">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <div class="flex items-start gap-3">
+              <span class="flex w-7 h-7 rounded-full bg-primary-light items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(0,51,204,0.1);">
+                <i class="fas fa-database text-sm" style="color:#0033CC;"></i>
+              </span>
+            <h3 class="text-xl font-semibold text-gray-800">How can I get a copy of my data?</h3>
+          </div>
+          <i class="fas fa-chevron-down chevron-icon text-gray-400 transition-transform"></i>
+        </summary>
+        <div class="mt-5 pl-10 text-gray-600">
+          <p>Currently, Stocky does not support automated data export. If you need a copy of your personal data or stock list, please email us at <a href="mailto:support@turnaworks.com" class="text-primary underline">support@turnaworks.com</a> and we'll assist you manually within a reasonable timeframe.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- deletion quick reminder card (fancy) -->
+  <div class="bg-primary-light rounded-3xl p-8 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-start gap-4">
+      <div class="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center">
+        <i class="fas fa-user-minus text-3xl" style="color:#0033CC;"></i>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold text-gray-800">Need to delete your account?</h4>
+        <p class="text-gray-600 max-w-lg mt-1">Follow the steps above in FAQ, or tap the quick guide: <span class="font-mono text-sm bg-white px-2 py-1 rounded mt-2 inline-block">👤 profile → Personal details → Delete account (bottom)</span></p>
+        <p class="text-sm text-gray-500 mt-2"><i class="fas fa-database mr-1"></i> Anonymised instantly → permanently erased after 6 months.</p>
+      </div>
+    </div>
+    <a href="mailto:support@turnaworks.com" class="whitespace-nowrap bg-white px-6 py-3 rounded-full font-medium shadow-sm border border-gray-200 hover:border-primary/30 transition flex items-center gap-2"><i class="fas fa-envelope text-primary"></i> email support</a>
+  </div>
+
+  <!-- still need help? (email only) -->
+  <div class="mt-16 text-center">
+    <i class="fas fa-handshake text-4xl text-gray-300 mb-3"></i>
+    <h3 class="text-2xl font-semibold text-gray-800">Still looking for something?</h3>
+    <p class="text-gray-500">We're happy to help you personally. Just send us an email.</p>
+    <div class="flex flex-wrap gap-4 justify-center mt-6">
+      <a href="mailto:support@turnaworks.com" class="bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition shadow-md text-lg"><i class="fas fa-envelope mr-2"></i> support@turnaworks.com</a>
+    </div>
+    <p class="text-sm text-gray-400 mt-4">We usually reply within 24 hours, Monday–Friday.</p>
+  </div>
+</main>
+
+<!-- footer with links (privacy/terms) -->
+<footer class="border-t border-gray-100 py-6 text-xs text-gray-400">
+  <div class="max-w-4xl mx-auto px-5 md:px-8 flex flex-wrap justify-between items-center">
+    <span>© 2026 Stocky · Mehmet Kolver</span>
+    <div class="flex gap-5">
+      <a href="#" class="hover:text-[#0033CC] transition">Privacy</a>
+      <a href="#" class="hover:text-[#0033CC] transition">Terms</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
